@@ -1,0 +1,2438 @@
+/*-- <hr class="horizontal-line line-animation">  -------------------*/
+*{
+  padding:0px;
+  margin: 0px;
+}
+body{
+  background: black;
+  display: block;
+  width: 100%;
+  overflow-x: hidden;
+  height: 100%;
+}
+.main-container{
+  width: 100%;
+  max-width: 1900px;
+  background: white;
+  margin: 0px auto;
+}
+.logo-2{
+  visibility: collapse;
+  position: absolute;
+  display: none;
+}
+.FAQ-title-area-2{
+  visibility: collapse;
+  position: absolute;
+  display: none;
+}
+/*MODAL-WINDOW-----------------------------------------------------------------------------------------------------------------------------------------*/
+.modal-window{
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  animation: modal 2s 0.1s forwards;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 1;
+}
+.modal-content{
+  margin:auto;
+  width: 60vh;
+  height: 80vh;
+  background-image: linear-gradient(to right, #f9d423 0%, #ff4e50 100%);
+  border-radius: 10px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-image{
+  width:97%;
+  height: 97%;
+  border-radius:10px;
+}
+#close{
+  display: none;
+}
+#close + label{
+  position:absolute;
+  color: #fff;
+  font-size: 25px;
+  z-index: 50;
+  top: 10px;
+  right: 10px;
+  cursor:pointer;
+  animation: modal 2s 0.1s forwards;
+  visibility: hidden;
+  opacity: 0;
+  width: 1920px;
+  height: 100vh;
+}
+#close:checked + label, #close:checked ~ .modal-window{
+  display: none;
+}
+  /*----Animations----------------------------------------------------------------------------------------------------------------------------------*/
+  @keyframes modal {
+    100% {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  /*----Animations-Ends-----------------------------------------------------------------------------------------------------------------------------*/
+/*MODAL-WINDOW-ENDS------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*SOCIAL-MEDIA-----------------------------------------------------------------------------------------------------------------------------------------*/
+  .social{
+    /*las imágenes usadas tienen width de 48px*/
+    width:48px;
+    position:fixed;
+    top:50px;
+    margin-left: 10px;
+  }
+  /* Extra centrado vertical*/
+  .social{
+    /*border:1px solid #000;*/
+    top:97%;
+    height:205px;
+    z-index: 1;
+    /*para poner height 192 deberíamos haber indicado en el reset de estilos font-size:0;*/
+    margin-top:-100px;
+  }
+  .social-medial-icon{
+    opacity:0.4;
+    height:50px;
+    width:50px;
+    transition: 0.3s;
+  }
+  .social-medial-icon:hover{
+    opacity:1;
+  }
+/*SOCIAL-MEDIA-ENDS------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*NAV-BAR----------------------------------------------------------------------------------------------------------------------------------------------*/
+  .nav-bar{
+    display: inline-flex;
+    width: 100%;
+    padding-bottom:7em;
+    background: black;
+    box-sizing: border-box;
+  }
+
+    /*----Options-ar---------------*/
+    .nav-options-ar{
+      height: 100%;
+      width: 58em;
+      float: left;
+      margin: 5em 0em auto auto;
+      padding: 1em;
+      padding-top: 5em;
+      box-sizing: border-box;
+    }
+    .nav-options-ar a{
+      text-decoration: none;
+      color: inherit;
+    }
+    .nav-option{
+      list-style:none;
+      font-size: 3.1em;
+      line-height: 1.6em;
+      font-family: 'BreeSerif-Regular';
+      color: white;
+      margin-left: 2em;
+      transition: 0.8s;
+      cursor:pointer;
+    }
+    .o1{} .o2{} .o3{} .o4{} .o5{} .o6{} .o7{}
+
+      .o1:hover{
+        color: rgba(248,165,1,255);
+        margin-left: 4em;
+      }
+      .o2:hover{
+        color: rgba(246,24,1,255);
+        margin-left: 4em;
+      }
+      .o3:hover{
+        color: rgba(188,224,92,255);
+        margin-left: 4em;
+      }
+      .o4:hover{
+        color: rgba(4,191,199,255);
+        margin-left: 4em;
+      }
+      .o5:hover{
+        color: rgba(248,165,1,255);
+        margin-left: 4em;
+      }
+      .o6:hover{
+        color: rgba(246,24,1,255);
+        margin-left: 4em;
+      }
+      .o7:hover{
+        color: rgba(188,224,92,255);
+        margin-left: 4em;
+      }
+      .o8:hover{
+        color:  rgba(4,191,199,255);
+        margin-left: 4em;
+      }
+    /*----Options-ar-Ends----------*/
+    /*----Logo-ar------------------*/
+    .logo{
+      height: 100%;
+      width: 50em;
+      float: right;
+      margin: 5em auto auto 0em;
+    }
+    .logo-image{
+      height: 17em;
+      width: 17em;
+      margin: 0px auto;
+    }
+    .circle{
+      border-radius:50%;
+      height: 6em;
+      width: 6em;
+    }
+    .c-top{
+      /* position: relative; */
+      margin: 0px auto;
+      background-color: rgba(246,251,245,255);
+      animation: grow-circle 0.5s 0.4s 2 alternate;
+    }
+    .c-right{
+      /* position: relative; */
+      float: right;
+      background-color: rgba(246,24,1,255);
+      animation: grow-circle 0.5s 0.8s 2 alternate;
+    }
+    .c-bottom{
+      /* position: relative; */
+      margin: 5em auto;
+      background-color: rgba(4,191,199,255);
+      animation: grow-circle 0.5s 1.2s 2 alternate;
+    }
+    .c-left{
+      /* position: relative; */
+      float: left;
+      background-color: rgba(188,224,92,255);
+      animation: grow-circle 0.5s 1.6s 2 alternate;
+    }
+    .logo-line{
+      width:100%;
+      background: white;
+      color: white;
+      margin: 0.5em auto 0.5em auto;
+    }
+    .logo-city-name{
+      color:white;
+      font-family: 'Raleway-Regular';
+      letter-spacing: 25px;
+      text-align: center;
+      font-size: 2.2em;
+      animation: change-location 15s infinite;
+      animation-timing-function: linear;
+    }
+    .logo-sub-title-ar{
+      width:100%;
+      display: block;
+      text-overflow: clip;
+      /* position: relative; */
+    }
+    .logo-title-ar{
+      margin: 0.2em auto 0.5em auto;
+      /* position: relative; */
+      width: 100%;
+      height: 3em;
+      font-size: 6.8em;
+      font-weight: bold;
+      text-align: center;
+      animation: grow-title 4s 12s;
+    }
+    .tittle-part1{
+      font-family: 'selima';
+      color: rgba(248,165,1,255);
+    }
+    .tittle-part2{
+      font-family: 'YesevaOne-Regular';
+      color: white;
+    }
+    .name-city-ar{
+      height:2.6em;
+      overflow: hidden;
+      width: 100%;
+      word-break: break-all;
+      white-space: nowrap;
+    }
+    .logo-2{
+      visibility: collapse;
+      position: absolute;
+    }
+
+    /*----Logo-ar-Ends-------------*/
+    /*----Animations---------------*/
+    @keyframes grow-title {
+      0%{transform: scale(1);}
+      50%{transform: scale(1.05);}
+      100%{transform: scale(1);}
+    }
+    @keyframes grow-circle {
+      0%{transform: scale(1);}
+      100%{  transform: scale(1.15);}
+    }
+    @keyframes change-location {
+        0%{
+          opacity: 1;
+          margin-left: -40em;
+          transform: scale(1);
+        }
+        5%{
+          padding-left: 0em;
+        }
+        100%{
+          word-break: break-all;
+          margin-left: 25em;
+        }
+    }
+    /*----Animations-Ends---------*/
+/*-NAV-BAR-ENDS--------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*-SCHEDULE------------------------------------------------------------------------------------------------------------------------------------------------*/
+  .schedule-area{
+    display:block;
+    background:black;
+    font-size:3em;
+    padding-bottom:0.5em;
+    box-sizing: border-box;
+  }
+  .schedule-title-area{
+    width:100%;
+    text-align:center;
+    bottom:2em;
+  }
+  .schedule-title{
+    color:gold;
+    font-family:'KGSummerSunshineShadow';
+  }
+  .schedule-content-area{
+    width:100%;
+    text-align:center;
+    bottom:0.5em;
+  }
+  .schedule-content{
+    color:white;
+    font-family:'BreeSerif-Regular';
+  }
+  .decorative-line-schedule-area{
+    background:black;
+    width:100%;
+    height:4em;
+  }
+  .decorative-line-schedule{
+    width:12%;
+    border:white;
+    margin: 0px auto;
+    height:1px;
+    background:white;
+  }
+/*-SCHEDULE-ENDS-------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*-SERVICES------------------------------------------------------------------------------------------------------------------------------------------------*/
+  .services-area{
+    width: 100%;
+    height: 35em;
+    background-image: url("../pics/decoration-image-paint-falling.jpg");
+    background-size: 500px 200px;
+    background-repeat: repeat-x;
+    background-color: white;
+  }
+  .services-title{
+    font-family:'KGSummerSunshine';
+    font-size:2em;
+    width:100%;
+    margin-left: 4em;
+    margin-bottom: 1.5em;
+    padding-top: 7em;
+    box-sizing: border-box;
+  }
+  .services-content{
+    display: flex;
+    justify-content: space-evenly;
+    width:100%;
+    height:20em;
+  }
+  .box-service{
+    height:200px;
+    width:153px;
+    /* margin-top:14em; */
+  }
+  .service{
+    border:2px black;
+    /* margin-top:14em; */
+    height:150px;
+    width:150px;
+    overflow:hidden;
+    border-radius:50%;
+    background: linear-gradient(270deg, #f61801, #bce05c, #04bfc7);
+    background-size: 800% 800%;
+    -webkit-animation: AnimationName 25s ease infinite;
+    -moz-animation: AnimationName 25s ease infinite;
+    animation: AnimationName 25s ease infinite;
+    transition: background 0.25s;
+  }
+  .service:nth-child(1):hover{
+    background: orange;
+  }
+  .service-image-1{
+    height: 70%;
+    width: 70%;
+    margin: 20px auto auto 15px;
+    display: block;
+  }
+  .service-image-2{
+    height: 65%;
+    width: 65%;
+    margin: 23px auto auto 27px;
+    display: block;
+  }
+  .service-image-3{
+    height: 60%;
+    width: 60%;
+    margin: 23px auto auto 28px;
+    display: block;
+  }
+  .service-image-4{
+    height: 75%;
+    width: 75%;
+    margin: 20px auto 10px 20px;
+    display: block;
+  }
+  .service-image-5{
+    height: 70%;
+    width: 65%;
+    margin: 23px auto 10px 25px;
+    display: block;
+  }
+  .service-image-6{
+    height: 60%;
+    width: 60%;
+    margin: 30px auto 10px 28px;
+    display: block;
+  }
+  .service-title{
+    font-size:1.5em;
+    text-align:center;
+    width:100%;
+    font-family:'BreeSerif-Regular';
+    margin-top:10px;
+  }
+    /*----Animations-------------*/
+    @-webkit-keyframes AnimationName {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
+    @-moz-keyframes AnimationName {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
+    @keyframes AnimationName {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
+    /*----Animations-Ends--------*/
+/*-SERVICES-ENDS-------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*-ABOUT---------------------------------------------------------------------------------------------------------------------------------------------------*/
+  .about{
+    height: 35em;
+    width: 100%;
+    background: white;
+    text-align: center;
+    margin-top: 4em;
+    /* position: relative; */
+    margin-bottom: 4em;
+  }
+  .about-title{
+    width: 100%;
+    height: 2em;
+    font-size:1.8em;
+    font-family: 'BreeSerif-Regular';
+    overflow: hidden;
+  }
+  .about-left{
+    width: 40%;
+    height: 27em;
+    float: left;
+    margin-top: 4em;
+  }
+  .about-right{
+    width:55%;
+    height: 25em;
+    float: right;
+    margin-top: 7em;
+    text-align: center;
+    font-family:'open-sans.light';
+    overflow: hidden;
+   /* text-shadow: 1px 2px #999; */
+  }
+  .about-text-top{
+    margin: auto 0px;
+    float:left;
+    width: 70%;
+    font-size:1.3em;
+    /* animation: about-text-movement 3s 2s; */
+  }
+  .about-text-bottom{
+    margin: 4em 6em auto auto;
+    width: 70%;
+    float: right;
+    font-size:1.3em;
+    /* animation: about-text-movement 3s 2s; */
+  }
+  .about-image{
+    height: 90%;
+    width: 100%;
+    margin-top:0px auto;
+    /* animation: image-disappeared 3s 2s; */
+  }
+    /*----Animations-------------*/
+    @keyframes about-text-movement { /*https://webdesign.tutsplus.com/es/articles/css3-transitions-and-transforms-from-scratch--webdesign-4975*/
+        0%{
+          transform: translate(1000px,0);
+          -webkit-transform: translate(1000px,0); /** Chrome & Safari **/
+          -o-transform: translate(1000px,0); /** Opera **/
+          -moz-transform: translate(1000px,0); /** Firefox **/
+        }
+    }
+    @keyframes grow-sub-title {
+      0%{transform: scale(0.5);}
+      50%{transform: scale(1.10);}
+      100%{transform: scale(1);}
+    }
+    @keyframes image-disappeared {
+      0%{opacity: 0;}
+      100%{opacity:1;}
+    }
+    @keyframes bar-grow {
+      0%{transform: scale(0);}
+      100%{transform: scale(1);}
+    }
+    /*----Animations-Ends--------*/
+/*-ABOUT-ENDS----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*-OFFERS--------------------------------------------------------------------------------------------------------------------------------------------------*/
+  .offers{
+    width: 100%;
+    height: 770px;
+    /* background-image: url("../pics/slider.jpg");
+    background-size: 850px 650px;
+    background-repeat: no-repeat;
+    background-color:black;
+    */
+    display: block;
+    background: black;
+  }
+  .title-offers{
+    width: 100%;
+    text-align: center;
+    font-family:'KGSummerSunshine';
+    color:white;
+    font-size:3em;
+  }
+  .carousel-area{
+    height:600px;
+  }
+  #carousel {
+    position: relative;
+    height: 500px;
+    top: 50%;
+    transform: translateY(-50%);
+    overflow: hidden;
+  }
+  #carousel div {
+    position: absolute;
+    transition: transform 1s, left 1s, opacity 1s, z-index 0s;
+    opacity: 1;
+  }
+  #carousel div img {
+    border-radius: 15px;
+    width: 400px;
+    transition: width 1s;
+  }
+  #carousel div.hideLeft {
+    left: 0%;
+    opacity: 0;
+    transform: translateY(50%) translateX(-50%);
+  }
+  #carousel div.hideLeft img {
+    width: 200px;
+  }
+  #carousel div.hideRight {
+    left: 100%;
+    opacity: 0;
+    transform: translateY(50%) translateX(-50%);
+  }
+  #carousel div.hideRight img {
+    width: 200px;
+  }
+  #carousel div.prev {
+    z-index: 5;
+    left: 30%;
+    transform: translateY(50px) translateX(-50%);
+  }
+  #carousel div.prev img {
+    width: 300px;
+  }
+  #carousel div.prevLeftSecond {
+    z-index: 4;
+    left: 15%;
+    transform: translateY(50%) translateX(-50%);
+    opacity: 0.7;
+  }
+  #carousel div.prevLeftSecond img {
+    width: 200px;
+  }
+  #carousel div.selected {
+    z-index: 10;
+    left: 50%;
+    transform: translateY(0px) translateX(-50%);
+  }
+  #carousel div.next {
+    z-index: 5;
+    left: 70%;
+    transform: translateY(50px) translateX(-50%);
+  }
+  #carousel div.next img {
+    width: 300px;
+  }
+  #carousel div.nextRightSecond {
+    z-index: 4;
+    left: 85%;
+    transform: translateY(50%) translateX(-50%);
+    opacity: 0.7;
+  }
+  #carousel div.nextRightSecond img {
+    width: 200px;
+  }
+  .buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .button-offers {
+      background-color: black;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: none;
+      color: white;
+      text-align: center;
+      cursor:pointer;
+      color:white;
+      font-size: 2.5em;
+      transition: 0.2s;
+      font-family:'KGSummerSunshineShadow';
+  }
+  .button-offers:hover {
+    transform: scale(1.2);
+  }
+  .button-offers:active {
+    transform: translateY(4px);
+  }
+/*-OFFERS-END----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*-LOCATION------------------------------------------------------------------------------------------------------------------------------------------------*/
+  .location {
+    width: 100%;
+    margin-top: 4em;
+    display:block;
+  }
+  .location-text-area{
+    height: 100%;
+    width: 100%;
+    background: white;
+    position: relative;
+    display: inline-flex;
+  }
+  .location-map-area{
+    width:100%;
+    padding:1em 10% 7em 10%;
+    position:relative;
+    box-sizing:border-box;
+  }
+  .map-responsive {
+      overflow:hidden;
+      padding-bottom:400px; /*Reduce este valor si el mapa fuera muy alto, por ejemplo 250px, puedes usar porcentajes, 50%*/
+      position:relative;
+      height:0;
+  }
+  .map-responsive iframe{
+      left:0;
+      top:0;
+      height:100%;
+      width:100%;
+      position:absolute;
+  }
+  .location-left {
+    width: 70%;
+    height: 100%;
+    float: right;
+    font-size: 1.4em;
+    margin-left: 10%;
+    padding-right: 4em;
+    box-sizing: border-box;
+  }
+  .location-title{
+    font-family:'BreeSerif-Regular';
+    display:inline-flex;
+    width: 100%;
+  }
+  .location-description{
+    margin-top: 2em;
+    font-size: 1.2em;
+    margin-left: 1.8em;
+    font-family: 'open-sans.light';
+  }
+  .location-reference{
+    margin-top: 2em;
+    font-size: 1.1em;
+    font-family: 'open-sans.light';
+    margin-left: 2em;
+    width: 100%;
+    display: inline-flex;
+  }
+  .location-reference p{
+    width:60%;
+  }
+  .location-reference div{
+    width:40%;
+  }
+  .location-dec-image{
+    height: 100%;
+    width: 80%;
+  }
+  .location-right {
+    width: 40%;
+    height: 90%;
+  }
+  .location-right-2{
+    width: 100%;
+    height: auto;
+    visibility: collapse;
+    position: absolute;
+  }
+/*-LOCATION-ENDS-------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*-CONTACT-US----------------------------------------------------------------------------------------------------------------------------------------------*/
+  .contact-us{
+    height:32em;
+    width:100%;
+    /* position: relative; */
+    display: inline-flex;
+    margin-top:4em;
+    background: white;
+  }
+  .contact-us-left{
+    width:40%;
+    height:90%;
+    float: left;
+    margin:0px auto;
+  }
+  .contact-us-left-image{
+    height: 100%;
+    width: 80%;
+    float:right;
+  }
+  .contact-us-title-area{
+    font-family:'BreeSerif-Regular';
+    display:inline-flex;
+    width: 100%;
+  }
+  .contact-us-title{
+    margin:0px auto;
+  }
+  .contact-us-right{
+    width:55%;
+    height:90%;
+    margin: 0px auto;
+    font-size: 1.3em;
+    margin-right: 4em;
+  }
+  .contact-us-right-image-area{
+    display:inline-flex;
+    float:right;
+    width:51%;
+    height:86%;
+  }
+  .contact-us-right-image{
+    height: 70%;
+    width: 90%;
+    margin-top: 6em;
+  }
+  .contact-us-text-area{
+    width:48%;
+    height:86%;
+    display: inline-block;
+    font-family: 'open-sans.light';
+  }
+  .contact-us-sub-title{
+    margin-left:1.5em;
+    font-size: 1.3em;
+  }
+  .sub-title-margin{
+    margin-top:1em;
+  }
+  .whatsapp-area{
+    width:100%;
+    display:inline-flex;
+    margin-top:1em;
+    margin-left:2.5em;
+  }
+  .instagram-area{
+    width:100%;
+    display:inline-flex;
+    margin-top:2em;
+    margin-left:4em;
+  }
+  .facebook-area{
+    width:100%;
+    display:inline-flex;
+    margin-top:1em;
+    margin-left:4em;
+  }
+  .instagram-href{
+    display:block;
+    margin: auto 0px;
+    font-size:1em;
+    list-style:none;
+  }
+  .instagram-href li a{
+    text-decoration: none;
+    color: #0066cc;
+  }
+  .whatsapp-href{
+    display:block;
+    margin: auto 0px auto 1em;
+    font-size:1em;
+    list-style:none;
+  }
+  .whatsapp-href li a{
+    text-decoration: none;
+    color: #0066cc;
+  }
+  .facebook-href{
+    display:block;
+    margin: auto 0px;
+    font-size:1em;
+    list-style:none;
+  }
+  .facebook-href li a{
+    text-decoration: none;
+    color: #0066cc;
+  }
+  .contact-us-title-2{
+    visibility: hidden;
+    position: absolute;
+  }
+/*-CONTACT-US-ENDS-----------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*-ALBUM---------------------------------------------------------------------------------------------------------------------------------------------------*/
+  .album{
+    width:100%;
+    /* position: relative; */
+    display: block;
+    margin-top: 8em;
+    background: white;
+  }
+  .Box{
+      height:380px;/*medida minima*/
+      width:380px;/*medida minima*/
+      border-radius:20px;
+      overflow: hidden;
+      /* box-shadow: 0 0 30px lightgreen; */
+  }
+  .prev-img-album{
+    height: 100%;
+    width: 100%;
+    border-radius:20px;
+  }
+  .img-album{
+    height: 80%;
+    width: 20%;
+    border-radius:20px;
+    margin: auto 0px;
+    transition: 0.4s;
+  }
+  .img-album:hover{
+    transform: scale(1.2);
+    box-shadow: 0 0 30px lightgreen;
+  }
+  .album-intro-text{
+    height: 100%;
+    width: 40%;
+    text-align: center;
+  }
+  .album-title{
+    margin: 0px auto;
+    font-size:5em;
+    font-family:'KGSummerSunshineShadow';
+  }
+  .album-intro-images{
+    height: 100%;
+    width: 57%;
+    display: flex;/*Gracias a esto es ques e pudo centrar las box en espacios iguales a esto y al espace-evenly de abajo*/
+    /* align-items por defecto tiene el valor `stretch` */
+    justify-content: space-evenly;
+  }
+  .album-intro-area{
+    margin: 0px auto;
+    height:450px;/*medida minima*/
+    width: 100%;
+    display: inline-flex;
+  }
+  .images-area{
+    margin: 0px auto;
+    height: 30em;
+    /* width: 100%; */
+    display: flex;/*Gracias a esto es ques e pudo centrar las box en espacios iguales a esto y al espace-evenly de abajo*/
+    /* align-items por defecto tiene el valor `stretch` */
+    justify-content: space-evenly;
+    overflow: hidden;
+  }
+  .container {
+      width:100%;
+  }
+  .container div {
+      width:100%;
+  }
+  .container .header {
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 60px;
+      font-family: 'BreeSerif';
+      animation: grow-header 4s infinite;
+      text-shadow: 0 0 15px gold;
+      text-align:center;
+      font-family:'KGSummerSunshineBlackout';
+      width:10em;
+      background:gold;
+      height:2em;
+      margin:0px auto;
+  }
+  .container .header span {
+    margin-left:1em;
+    margin-right:1em;
+  }
+  .container .content {
+      display: none;
+      margin : 5px;
+  }
+  /*----Animations------------*/
+  @keyframes grow-header {
+    0%{transform: scale(1);}
+    30%{transform: scale(1);}
+    50%{transform: scale(1.2);}
+    70%{transform: scale(1);}
+    100%{transform: scale(1);}
+  }
+  /*----Animations-Ends-------*/
+/*-ALBUM-ENDS----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*-FAQ-----------------------------------------------------------------------------------------------------------------------------------------------------*/
+  .FAQ {
+    width: 100%;
+    background-image: url('../pics/bd.jpg');
+    background-size: 35em auto;
+    background-repeat: repeat;
+    margin-top: 5em;
+    display:flex;
+    padding-bottom:2em;
+    box-sizing: border-box;
+  }
+  .all { /* Box-shadow */
+    box-shadow: 0 0 5px #333;
+  }
+  .decorative-angle{
+    width: 0;
+    height: 0;
+  }
+  .left-question{
+    left: 21%;
+  }
+  .right-question{
+    right: 11%;
+  }
+  .left-angle-1{
+    margin-left: -16px;
+    border-right: 8px solid #fd8300;
+    border-top: 12px solid transparent;
+    border-left: 8px solid transparent;
+    border-bottom: 12px solid #fd8300;
+  }
+  .right-angle-1{
+    margin-left: 100%;
+    border-left: 8px solid #d61400;
+    border-bottom: 12px solid #d61400;
+    border-right: 8px solid transparent;
+    border-top: 12px solid transparent;
+  }
+  .left-angle-2{
+    margin-left: -16px;
+    border-right: 8px solid #a4c44f;
+    border-top: 12px solid transparent;
+    border-left: 8px solid transparent;
+    border-bottom: 12px solid #a4c44f;
+  }
+  .right-angle-2{
+    margin-left: 100%;
+    border-left: 8px solid #05959b;
+    border-bottom: 12px solid #05959b;
+    border-right: 8px solid transparent;
+    border-top: 12px solid transparent;
+  }
+  .question-area{
+    height:5em;
+    width:20%;
+    border:black;
+    position: absolute;
+    margin-top: -1.5em;
+    text-align: center;
+    font-family:'BreeSerif-Regular';
+  }
+  .question{
+    font-size:2em;
+  }
+  .answer-area{
+    padding-bottom: 2em;
+    height: auto;
+    width:90%;
+    border:black;
+    margin: 2em auto 3em auto;
+    background:white;
+    box-sizing: border-box;
+  }
+  .answer{
+    margin: auto 10% auto 10%;
+    font-family: 'open-sans.light';
+    text-align:justify;
+    font-size:1.5em;
+    padding-top: 2.5em;
+    box-sizing: border-box;
+  }
+  .FAQ-title-area{
+    text-align: center;
+    width:3em;
+    font-size:1.7em;
+    position: relative;
+  }
+  .FAQ-title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family:'Organic Relief';
+    background:black;
+    width:2em;
+    color:white;
+  }
+  .FAQ-content{
+    width:79%;
+    display:block;
+  }
+  .FAQ-left-margin-1{ /*aplied to the firts part of the title of FAQ area*/
+    margin-left:5%;
+  }
+  .FAQ-left-margin-2{ /*aplied to the second part of the title of FAQ area*/
+    margin-left:1em;
+  }
+/*-FAQ-ENDS------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*-OUR-CLIENTS---------------------------------------------------------------------------------------------------------------------------------------------*/
+  .client-logo{
+    height:100px;
+    width:250px;
+  }
+/*-OUR-CLIENTS-ENDS----------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*-FOOTER--------------------------------------------------------------------------------------------------------------------------------------------------*/
+  footer {
+    height: 8.1em;
+    width: 100%;
+    background: black;
+    display: inline-flex;
+  }
+  .footer-left{
+    background:black;
+    width:25%;
+    text-align: center;
+    margin-top: 1em;
+  }
+  .footer-right{
+    width:85%;
+    display: inline-flex;
+  }
+  .footer-options-ar{
+    display:flex;
+    margin:  auto 0px;
+    list-style:none;
+  }
+  .footer-option{
+    color: white;
+    text-decoration: none;
+    margin-left: 2.2em;
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: 'BreeSerif-Regular';
+  }
+  /*----Logo Footer------------*/
+  .logo-footer{
+    width: 90%;
+    margin: 0px auto;
+    display: inline-flex;
+  }
+  .logo-image-footer{
+    height: 4.8em;
+    width: 5em;
+    margin-top: 0.5em;
+  }
+  .circle-footer{
+    border-radius:50%;
+    height: 1.6em;
+    width: 1.6em;
+  }
+  .c-top-footer{
+    /* position: relative; */
+    margin: 0px auto;
+    background-color: rgba(246,251,245,255);
+  }
+  .c-right-footer{
+    /* position: relative; */
+    float: right;
+    background-color: rgba(246,24,1,255);
+  }
+  .c-bottom-footer{
+    /* position: relative; */
+    margin: 1.7em auto;
+    background-color: rgba(4,191,199,255);
+  }
+  .c-left-footer{
+    /* position: relative; */
+    float: left;
+    background-color: rgba(188,224,92,255);
+  }
+  .logo-title-ar-footer{
+    margin: 0px auto;
+    /* position: relative; */
+    font-size: 1.7em;
+    font-weight: bold;
+  }
+  .tittle-part1-footer{
+    font-family: 'selima';
+    color: rgba(248,165,1,255);
+  }
+  .tittle-part2-footer{
+    font-family: 'YesevaOne-Regular';
+    color: white;
+  }
+  /*----Logo Footer-Ends--------*/
+/*-FOOTER--ENDS---------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*-MISCELLANIOUS--------------------------------------------------------------------------------------------------------------------------------------------*/
+  .horizontal-line{
+    height:3px;
+    margin: 0px auto;
+    width:80%;
+    border:none;
+    background:black;
+    position absolute;
+    bottom:0;
+  }
+  .line-animation{
+    animation: bar-grow 3s 5s;
+  }
+  .footer-line{
+    height:65%;
+    margin:auto 0px;
+    width:2px;
+    border:none;
+    background:lightgrey;">
+  }
+  .grow-animation{
+    animation: grow-sub-title 3s 2s;
+  }
+  #facebook-icon {
+    background: #3b5998;
+    text-indent: -999em;
+    width: 35px;
+    height: 40px;
+    border-radius: 2.5px;
+    position: relative;
+    overflow: hidden;
+    border: 7.5px solid #3b5998;
+    border-bottom: 0;
+    display: inline-block;
+    margin-right: 1em;
+  }
+  #facebook-icon::before {
+      background: #3b5998;
+      content: "/10";
+      position: absolute;
+      bottom: -15px;
+      right: -17.5px;
+      width: 20px;
+      height: 40px;
+      border: 7.5px solid #eee;
+      border-radius: 10px;
+  }
+  #facebook-icon::after {
+      background: #eee;
+      content: "/10";
+      position: absolute;
+      top: 18px;
+      right: 2.5px;
+      width: 22px;
+      height: 7px;
+  }
+  /* Logo Instagram - Main Box */
+  .instagram-logo {
+    width: 50px;
+    height: 50px;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    margin-right: 1em;
+  }
+  /* Logo Instagram - innerbox */
+  .innerbox-instagram-logo {
+    width: 15px;
+    height: 15px;
+    border: 3px solid white;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    position: relative;
+  }
+  /* Logo Instagram - circle*/
+  .innerbox-instagram-logo::before {
+    content: '';
+    width: 33px;
+    height: 33px;
+    border: 4px solid #fff;
+    border-radius: 10px;
+    background: transparent;
+    position: absolute;
+  }
+  /*  Logo Instagram - mini circle */
+  .innerbox-instagram-logo::after {
+    content: '';
+    width: 2px;
+    height: 2px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    top: -6px;
+    right: -5px;
+  }
+  .faa-whatsapp  { /*Whatsapp Logo Background*/
+    color:#fff;
+    background:
+     linear-gradient(#25d366,#25d366) 14% 84%/16% 16% no-repeat,
+     radial-gradient(#25d366 60%,transparent 0);
+  }
+  @-webkit-keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-250px * 7));
+    }
+  }
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-250px * 7));
+    }
+  }
+  .slider {
+    background: white;
+    /* box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125); */
+    height: 100px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+  .slider::before, .slider::after {
+    background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+    content: "";
+    height: 100px;
+    position: absolute;
+    width: 200px;
+    z-index: 2;
+  }
+  .slider::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+  }
+  .slider::before {
+    left: 0;
+    top: 0;
+  }
+  .slider .slide-track {
+    -webkit-animation: scroll 40s linear infinite;
+            animation: scroll 40s linear infinite;
+    display: flex;
+    width: calc(250px * 14);
+  }
+  .slider .slide {
+    height: 100px;
+    wid
+  }
+  .separation-line{
+    width:70%;
+    border:lightgrey;
+    margin: 0px auto;
+    height:1px;
+    background:lightgrey;
+  }
+/*-MISCELLANIOUS-ENDS---------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+/*########################################################################################################################################################*/
+/*########################################################### RESPONSIVE DESIGN    #######################################################################*/
+/*########################################################################################################################################################*/
+
+
+@media screen and (min-width:1150px)AND (max-width:1700px){
+  /*NAV-BAR----------------------------------------------------------------------------------------------------------------------------------------------*/
+  .logo-2{
+    visibility: collapse;
+    position: absolute;
+  }
+
+    .logo {
+      height: 100%;
+      width: 40%;
+      margin: 5em 5em auto 0em;
+      overflow: hidden;
+    }
+    .logo-image {
+      height: 15em;
+      width: 15em;
+    }
+    .logo-title-ar {
+      height: 3em;
+      font-size: 4.5em;
+    }
+    .nav-options-ar {
+      width: 50%;
+      padding-top: 3em;
+    }
+    .name-city-ar {
+      height: 1.8em;
+    }
+    .logo-city-name {
+      letter-spacing: 20px;
+      font-size: 1.5em;
+    }
+    .nav-option {
+      font-size: 2.5em;
+    }
+    .circle{
+      height: 5em;
+      width: 5em;
+    }
+  /*-NAV-BAR-ENDS----------------------------------------------------------------------------------------------------------------------------------------*/
+
+  /*SOCIAL-MEDIA-----------------------------------------------------------------------------------------------------------------------------------------*/
+  .social{
+    top:95%;
+  }
+  /*-SOCIAL-MEDIA-ENDS-----------------------------------------------------------------------------------------------------------------------------------*/
+
+  /*SERVICES---------------------------------------------------------------------------------------------------------------------------------------------*/
+    .services-title {
+      margin-left: 1.2em;
+    }
+    .service{
+      height: 130px;
+      width: 130px;
+    }
+    .service-title {
+      font-size: 1.4em;
+    }
+    .service-image-1 {
+      height: 65%;
+      width: 65%;
+    }
+    .service-image-2 {
+      height: 65%;
+      width: 60%;
+    }
+    .service-image-3 {
+      height: 60%;
+      width: 55%;
+    }
+    .service-image-4 {
+      height: 70%;
+      width: 70%;
+    }
+    .service-image-5 {
+      height: 65%;
+      width: 60%;
+    }
+    .service-image-6 {
+      height: 55%;
+      width: 55%;
+    }
+  /*-SERVICES-ENDS---------------------------------------------------------------------------------------------------------------------------------------*/
+
+  /*ABOUT------------------------------------------------------------------------------------------------------------------------------------------------*/
+    .about-text-top {
+      font-size: 1.25em;
+      width: 75%;
+    }
+    .about-text-bottom {
+      font-size: 1.25em;
+      width: 75%;
+    }
+  /*-ABOUT--ENDS-----------------------------------------------------------------------------------------------------------------------------------------*/
+
+  /*LOCATION---------------------------------------------------------------------------------------------------------------------------------------------*/
+    .location-left{
+      width: 60%;
+      padding-right: 0em;
+    }
+    .location-description{
+      font-size: 1em;
+    }
+    .location-reference{
+      font-size: 1em;
+    }
+    .location-dec-image {
+      width: 70%;
+    }
+    .location-text-area {
+      height: 23em;
+    }
+  /*-LOCATION-ENDS---------------------------------------------------------------------------------------------------------------------------------------*/
+
+  /*ALBUM------------------------------------------------------------------------------------------------------------------------------------------------*/
+    .album-intro-area {
+      height: 25em;
+      width: 100%;
+    }
+    .album-title {
+      font-size: 4em;
+    }
+    .album-intro-images {
+      height: 100%;
+      width: 57%;
+    }
+    .Box {
+      height: 75%;
+      width: 40%;
+    }
+  /*-ALBUM---ENDS----------------------------------------------------------------------------------------------------------------------------------------*/
+
+  /*SCHEDULE---------------------------------------------------------------------------------------------------------------------------------------------*/
+    .schedule-title{
+      font-size: 1.9em;
+    }
+    .schedule-content{
+      font-size:1.4em;
+    }
+  /*-SCHEDULE-ENDS---------------------------------------------------------------------------------------------------------------------------------------*/
+
+  /*CONTACT-US-------------------------------------------------------------------------------------------------------------------------------------------*/
+    .contact-us-right {
+      width: 60%;
+      font-size: 1.1em;
+    }
+    .contact-us-left {
+      width: 35%;
+    }
+    .contact-us-left-image {
+      height: 80%;
+      width: 90%;
+      margin-top: 5em;
+    }
+    .contact-us-right-image {
+      height: 60%;
+      margin-top: 8em;
+    }
+    .contact-us-sub-title {
+      font-size: 1em;
+    }
+    .contact-us-sub-title {
+      margin-left: 0.5em;
+    }
+    .whatsapp-area {
+      margin-left: 1.5em;
+      margin-bottom: 1em;
+    }
+    .instagram-area {
+      margin-left: 2em;
+    }
+    .facebook-area{
+      margin-left: 2em;
+    }
+    .contact-us-right-image {
+      width: 80%;
+      margin-left: 2em;
+    }
+  /*-CONTACT-US-ENDS----------------------------------------------------------------------------------------------------------------------------------------*/
+
+  /*FAQ-----------------------------------------------------------------------------------------------------------------------------------------------------*/
+    .answer-area {
+      padding-bottom: 2em;
+      height: auto;
+      /* box-sizing: border-box; */
+    }
+    .question-area {
+      width: 30%;
+    }
+    .left-question {
+      left: 28%;
+    }
+    .right-question {
+      right: 9%;
+    }
+  /*-FAQ-ENDS-----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+  /*FOOTER--------------------------------------------------------------------------------------------------------------------------------------------------*/
+    .logo-image-footer {
+      height: 4.8em;
+      width: 6em;
+      margin-top: 0.5em;
+    }
+    .circle-footer {
+      height: 1.4em;
+      width: 1.4em;
+    }
+    .logo-title-ar-footer {
+      margin: auto;
+      margin-left: auto;
+      position: relative;
+      font-size: 1em;
+      font-weight: bold;
+      margin-left: 1em;
+    }
+    .footer-left {
+      width: 20%;
+    }
+    .footer-right {
+      width: 80%;
+      font-size: 0.9em;
+      padding-right: 1em;
+      box-sizing: border-box;
+    }
+    .footer-options-ar li{
+      height: 2em;
+    }
+  /*-FOOTER-ENDS---------------------------------------------------------------------------------------------------------------------------------------------*/
+}
+@media screen and (min-width:750px) AND (max-width:1149px){
+
+  .logo-2{
+    visibility: collapse;
+    position: absolute;
+  }
+  /*NAV-BAR----------------------------------------------------------------------------------------------------------------------------------------------*/
+    .logo {
+      height: 100%;
+      width: 38%;
+      margin: 5em 5em auto 0em;
+      overflow: hidden;
+    }
+    .logo-image {
+      height: 8em;
+      width: 8em;
+    }
+    .logo-title-ar {
+      font-size: 2.7em;
+      margin: 0.5em auto 0.5em auto;
+      font-size: 2.5em;
+    }
+    .nav-options-ar {
+      width: 52%;
+      padding-top: 0em;
+    }
+    .name-city-ar {
+      height: 1.3em;
+    }
+    .logo-city-name {
+      letter-spacing: 10px;
+      font-size: 1.2em;
+    }
+    .nav-option {
+      font-size: 1.7em;
+      line-height: 1.6em;
+    }
+    .circle {
+      height: 3em;
+      width: 3em;
+    }
+    .c-bottom {
+      margin: 3em auto;
+    }
+  /*-NAV-BAR-ENDS----------------------------------------------------------------------------------------------------------------------------------------*/
+
+  /*SOCIAL-MEDIA-----------------------------------------------------------------------------------------------------------------------------------------*/
+  .social {
+    top: 98%;
+  }
+  .social-medial-icon {
+    height: 38px;
+    width:  38px;
+  }
+  /*-SOCIAL-MEDIA-ENDS-----------------------------------------------------------------------------------------------------------------------------------*/
+
+  /*SERVICES---------------------------------------------------------------------------------------------------------------------------------------------*/
+    .services-content {
+      height: auto;
+    }
+    .box-service {
+      width: 100px;
+    }
+    .services-title {
+      margin-left: 1.2em;
+    }
+    .service{
+      height: 90px;
+      width: 90px;
+    }
+    .service-title {
+      font-size: 1.1em;
+    }
+    .service-image-1 {
+      height: 55%;
+      width: 55%;
+    }
+    .service-image-2 {
+      height: 50%;
+      width: 45%;
+      margin: 23px auto auto 25px;
+    }
+    .service-image-3 {
+      height: 50%;
+      width: 40%;
+      margin: 23px auto auto 26px;
+    }
+    .service-image-4 {
+      height: 60%;
+      width: 60%;
+      margin: 20px auto 10px 18px;
+    }
+    .service-image-5 {
+      height: 55%;
+      width: 50%;
+    }
+    .service-image-6 {
+      height: 45%;
+      width: 45%;
+      margin: 25px auto 25px 24px;
+    }
+
+  /*-SERVICES-ENDS---------------------------------------------------------------------------------------------------------------------------------------*/
+
+  /*ABOUT------------------------------------------------------------------------------------------------------------------------------------------------*/
+    .about{
+      margin-top: 3em;
+      height: 24em;
+    }
+    .about-left {
+      width: 40%;
+      margin-top: 4em;
+      height: 100%;
+    }
+    .about-image{
+      height: 75%;
+    }
+    .about-right{
+      margin-top: 5em;
+      height: 100%;
+    }
+    .about-text-top {
+      font-size: 1em;
+      width: 75%;
+    }
+    .about-text-bottom {
+      font-size: 1em;
+      width: 75%;
+    }
+
+  /*-ABOUT--ENDS-----------------------------------------------------------------------------------------------------------------------------------------*/
+
+  /*LOCATION---------------------------------------------------------------------------------------------------------------------------------------------*/
+    .location-text-area {
+      height: 23em;
+    }
+    .location-left {
+      width: 60%;
+      padding-right: 0em;
+      margin-left: 5%;
+    }
+    .location-description {
+        font-size: 0.85em;
+    }
+    .location-reference {
+      font-size: 0.75em;
+    }
+    .location-right {
+      width: 45%;
+      height: 90%;
+    }
+    .location-map-area {
+      width: 100%;
+      padding: 1em 10% 5em 10%;
+      position: relative;
+      box-sizing: border-box;
+    }
+  /*-LOCATION-ENDS---------------------------------------------------------------------------------------------------------------------------------------*/
+
+  /*ALBUM------------------------------------------------------------------------------------------------------------------------------------------------*/
+    .album-intro-area {
+      height: 20em;
+      width: 100%;
+    }
+    .album-title {
+      font-size: 2.8em;
+    }
+    .album-intro-images {
+      height: 80%;
+      width: 57%;
+    }
+    .Box {
+      height: 90%;
+      width: 45%;
+    }
+    .container .header {
+      font-size: 50px;
+    }
+    .images-area {
+      height: 15.5em;
+    }
+  /*-ALBUM---ENDS----------------------------------------------------------------------------------------------------------------------------------------*/
+
+  /*SCHEDULE---------------------------------------------------------------------------------------------------------------------------------------------*/
+    .schedule-title{
+      font-size: 1.3em;
+    }
+    .schedule-content{
+      font-size:0.9em;
+    }
+  /*-SCHEDULE-ENDS---------------------------------------------------------------------------------------------------------------------------------------*/
+
+  /*CONTACT-US-------------------------------------------------------------------------------------------------------------------------------------------*/
+    .contact-us-right {
+      width: 65%;
+    }
+    .contact-us-left {
+      width: 35%;
+    }
+    .contact-us-left-image {
+      height: 65%;
+      margin-top: 9em;
+    }
+    .contact-us-right-image {
+      height: 50%;
+      margin-top: 10em;
+    }
+    .whatsapp-link{
+      width:20em;
+    }
+  /*-CONTACT-US-ENDS----------------------------------------------------------------------------------------------------------------------------------------*/
+
+  /*FAQ-----------------------------------------------------------------------------------------------------------------------------------------------------*/
+    .answer-area {
+      padding-bottom: 2em;
+      height: auto;
+      /* box-sizing: border-box; */
+    }
+    .question-area {
+      width: 30%;
+    }
+    .left-question {
+      left: 30%;
+    }
+    .question {
+      font-size: 1.6em;
+    }
+    .FAQ-title-area {
+      width: 1.5em;
+    }
+    .FAQ-title {
+      font-size: 1em;
+    }
+    .answer {
+      font-size: 1.3em;
+    }
+    .right-question {
+      right: 13%;
+    }
+  /*-FAQ-ENDS-----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+  /*FOOTER--------------------------------------------------------------------------------------------------------------------------------------------------*/
+    footer {
+      height: 7em;
+    }
+    .logo-image-footer {
+      height: 3em;
+      width: 3em;
+      margin-top: 0.5em;
+    }
+    .circle-footer {
+      height: 1em;
+      width: 1em;
+    }
+    .logo-title-ar-footer {
+      font-size: 0.5em;
+      margin: auto;
+    }
+    .footer-left {
+      width: 20%;
+    }
+    .footer-right {
+      font-size: 0.7em;
+    }
+    .footer-option {
+      margin-left: 1em;
+      font-size: 1.1em;
+    }
+    .footer-options-ar li{
+      height: 2em;
+    }
+    .c-bottom-footer {
+      margin: 1em auto auto auto;
+    }
+  /*-FOOTER-ENDS-------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+}
+@media screen and (min-width:330px) AND (max-width:749px){
+
+  /*SOCIAL-BAR--------------------------------------------------------------------------------------------------------------------------------------------*/
+  .title-offers{
+    font-size:2em;
+  }
+  /*SOCIAL-BAR- ENDS--------------------------------------------------------------------------------------------------------------------------------------*/
+
+  /*MODAL-WINDOW------------------------------------------------------------------------------------------------------------------------------------------*/
+  .modal-content {
+    width: 40vh;
+  }
+  /*MODAL-WINDOW-ENDS-------------------------------------------------------------------------------------------------------------------------------------*/
+
+  /*NAV-BAR-----------------------------------------------------------------------------------------------------------------------------------------------*/
+    .nav-bar {
+      display: inline-block;
+      width: 100%;
+      padding-bottom: 5em;
+    }
+    .nav-options-ar {
+      width: 100%;
+      padding-top: 0em;
+    }
+
+    .logo-image {
+      height: 6em;
+      width: 6em;
+    }
+
+    .logo {
+      visibility: collapse;
+      position: absolute;
+    }
+    .logo-2 {
+      height: 15em;
+      width: 100%;
+      margin-top: 2em;
+      overflow: hidden;
+      visibility: visible;
+      position: relative;
+      display: block;
+    }
+
+    .logo-image {
+      height: 6em;
+      width: 6em;
+    }
+    .logo-title-ar {
+      font-size: 1em;
+      margin: auto;
+      font-size: 2.2em;
+    }
+    .logo-title-ar {
+      height: 2.2em;
+    }
+    .logo-line {
+      width: 90%;
+      background: white;
+      color: white;
+      margin: 0.5em auto 0.5em auto;
+    }
+
+    .nav-options-ar {
+      width: 100%;
+      margin: 1em auto auto auto;
+      text-align: center;
+    }
+    .name-city-ar {
+      height: 1em;
+    }
+
+    .logo-city-name {
+      letter-spacing: 10px;
+      font-size: 1em;
+    }
+
+    .nav-option {
+      font-size: 2em;
+      line-height: 1.8em;
+      margin-left: 0em;
+    }
+    .circle {
+      height: 2em;
+      width: 2em;
+    }
+    .c-bottom {
+      margin: 2em auto;
+    }
+  /*-NAV-BAR-ENDS----------------------------------------------------------------------------------------------------------------------------------------*/
+
+  /*SOCIAL-MEDIA-----------------------------------------------------------------------------------------------------------------------------------------*/
+    .social {
+      top: 96%;
+    }
+    .social-medial-icon {
+      height: 38px;
+      width:  38px;
+    }
+  /*-SOCIAL-MEDIA-ENDS-----------------------------------------------------------------------------------------------------------------------------------*/
+
+  /*-OFFERS----------------------------------------------------------------------------------------------------------------------------------------------*/
+    #carousel div img {
+      width: 48vh;
+      transition: width 0.2s;
+      height: 502px;
+      border-radius: 0px;
+    }
+    .button-offers {
+      font-size: 3em;
+    }
+  /*-OFFERS-ENDS-----------------------------------------------------------------------------------------------------------------------------------------*/
+
+  /*SERVICES---------------------------------------------------------------------------------------------------------------------------------------------*/
+    .services-content {
+      height: auto;
+      flex-wrap: wrap;
+    }
+    .services-area {
+      height: 40em;
+    }
+    .box-service {
+      width: 100px;
+      height: 150px;
+    }
+    .services-title {
+      margin-left: 0.8em;
+      font-size: 1.7em;
+    }
+    .service{
+      height: 90px;
+      width: 90px;
+    }
+    .service-title {
+      font-size: 1em;
+    }
+    .service-image-1 {
+      height: 55%;
+      width: 55%;
+    }
+    .service-image-2 {
+      height: 50%;
+      width: 45%;
+      margin: 23px auto auto 25px;
+    }
+    .service-image-3 {
+      height: 50%;
+      width: 40%;
+      margin: 23px auto auto 26px;
+    }
+    .service-image-4 {
+      height: 60%;
+      width: 60%;
+      margin: 20px auto 10px 18px;
+    }
+    .service-image-5 {
+      height: 55%;
+      width: 50%;
+    }
+    .service-image-6 {
+      height: 45%;
+      width: 45%;
+      margin: 25px auto 25px 24px;
+    }
+
+  /*-SERVICES-ENDS---------------------------------------------------------------------------------------------------------------------------------------*/
+
+  /*ABOUT------------------------------------------------------------------------------------------------------------------------------------------------*/
+    .about{
+      margin-top: 3em;
+      padding-bottom: 2em;
+      display: block;
+    }
+    .grow-animation {
+      animation: none;
+    }
+    .about-left {
+      width: 100%;
+      margin-top: 4em;
+      height: 50%;
+    }
+    .about-title {
+      font-size: 1.5em;
+      font-family: 'BreeSerif-Regular';
+    }
+    .about-image{
+      height: 90%;
+    }
+    .about-right{
+      padding: 2em 5px 2em 5px;
+      width: 100%;
+      box-sizing: border-box;
+      height: auto;
+      margin-top: 0em;
+      float: none;
+      overflow: visible;
+      float: right;
+    }
+    .about-text-top{
+      font-size: 1em;
+      width: 100%;
+      text-align: center;
+      margin: 0px auto;
+      float: left;
+      margin-bottom: 2em;
+    }
+    .about-text-bottom{
+      font-size: 1em;
+      padding-top: 2em;
+      width: 100%;
+      float: none;
+    }
+
+  /*-ABOUT--ENDS-----------------------------------------------------------------------------------------------------------------------------------------*/
+
+  /*LOCATION---------------------------------------------------------------------------------------------------------------------------------------------*/
+    .location-text-area {
+      height: auto;
+      display: inline-block;
+    }
+    .location-title{
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+
+    .location-left {
+      width: 100%;
+      padding-right: 1.5em;
+      padding-left: 1.5em;
+      box-sizing: border-box;
+    }
+    .location-description {
+      font-size: 0.75em;
+      margin-left: 1em;
+      margin-right: 1em;
+    }
+    .location-reference {
+      font-size: 0.75em;
+      margin-left: 1.2em;
+      margin-bottom: 2em;
+      width: auto;
+    }
+    .location-reference p {
+      width: 90%;
+    }
+    .location-right {
+      visibility: collapse;
+      position: absolute;
+    }
+    .location-right-2{
+      width: 100%;
+      height: auto;
+      visibility: visible;
+      position: relative;
+    }
+    .location-dec-image {
+      width: 100%;
+    }
+
+  /*-LOCATION-ENDS---------------------------------------------------------------------------------------------------------------------------------------*/
+
+  /*ALBUM------------------------------------------------------------------------------------------------------------------------------------------------*/
+      .album {
+        margin-top: 4em;
+      }
+      .album-intro-text {
+        height: auto;
+        width: 100%;
+        text-align: center;
+      }
+    .album-intro-area {
+      height: auto;
+      width: 100%;
+      display: inline-block;
+    }
+    .prev-img-album{
+      height: 150px;
+      width: 150px;
+    }
+    .Box{
+      height: 150px;
+      width: 150px;
+    }
+    .album-title {
+      font-size: 2.8em;
+    }
+    .album-intro-images {
+      margin-top: 2em;
+      margin-bottom: 2em;
+      height: auto;
+      width: 100%;
+    }
+    .container .header {
+      font-size: 30px;
+    }
+    .images-area {
+      height: 12em;
+    }
+  /*-ALBUM---ENDS----------------------------------------------------------------------------------------------------------------------------------------*/
+
+  /*SCHEDULE---------------------------------------------------------------------------------------------------------------------------------------------*/
+    .schedule-title{
+      font-size: 1.3em;
+    }
+    .schedule-content{
+      font-size:0.9em;
+    }
+    .schedule-area {
+      font-size: 1.5em;
+    }
+  /*-SCHEDULE-ENDS---------------------------------------------------------------------------------------------------------------------------------------*/
+
+  /*CONTACT-US-------------------------------------------------------------------------------------------------------------------------------------------*/
+    .contact-us {
+      height: auto;
+      width: 100%;
+      display: inline-block;
+    }
+    .contact-us-right {
+      width: 100%;
+    }
+    .contact-us-left {
+      width: 100%;
+    }
+    .contact-us-left-image {
+      height: 100%;
+      width: 100%;
+      margin-top: 0em;
+    }
+    .contact-us-title-2{
+      font-family:'BreeSerif-Regular';
+      display:block;
+      width: 100%;
+      text-align: center;
+      font-size: 2em;
+      visibility: visible;
+      position: relative;
+    }
+    .contact-us-title-area{
+      visibility: collapse;
+      position: absolute;
+    }
+    .contact-us-text-area {
+      width: 100%;
+      height: auto;
+      display: inline-block;
+      font-family: 'open-sans.light';
+    }
+    .contact-us-sub-title {
+      margin-top: 2em;
+      margin-left: 0em;
+      font-size: 1em;
+      text-align: center;
+    }
+
+    .contact-us-right-image-area {
+      width: 100%;
+      height: 100%;
+    }
+    .contact-us-right-image {
+      width: 95%;
+      height: 100%;
+      margin: 0px auto;
+    }
+
+    .whatsapp-area{
+        margin-left: 0em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .whatsapp-link {
+      width: auto;
+    }
+    .whatsapp-href {
+      font-size: 0.7em;
+    }
+
+    .instagram-area {
+        margin-left: 0em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .instagram-href {
+      font-size: 0.9em;
+    }
+    .instagram-link {
+      width: auto;
+    }
+
+    .facebook-area {
+        margin-left: -1.2em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .facebook-href {
+      font-size: 0.9em;
+    }
+    .facebook-link {
+      width: auto;
+    }
+  /*-CONTACT-US-ENDS----------------------------------------------------------------------------------------------------------------------------------------*/
+
+  /*FAQ-----------------------------------------------------------------------------------------------------------------------------------------------------*/
+    .FAQ{
+      display: block;
+    }
+    .answer-area {
+      padding-bottom: 2em;
+      height: auto;
+      /* box-sizing: border-box; */
+    }
+    .question-area {
+      width: 60%;
+    }
+    .left-question {
+      left: 15%;
+    }
+    .question {
+      font-size: 1.5em;
+    }
+    .FAQ-title-area {
+      visibility: collapse;
+      position: absolute;
+    }
+    .FAQ-title {
+      visibility: collapse;
+      position: absolute;
+    }
+    .FAQ-title-area-2{
+      height: auto;
+      padding-top: 3em;
+      padding-bottom: 2em;
+      width:100%;
+      box-sizing: border-box;
+      visibility: visible;
+      position: relative;
+      display: block;
+    }
+    .FAQ-title-2-background {
+      color: white;
+      background: black;
+    }
+    .FAQ-title-2{
+      display: block;
+      text-align: center;
+      font-family:'Organic Relief';
+      display: block;
+    }
+    .answer {
+      font-size: 1.3em;
+      padding-top:3.5em;
+    }
+    .FAQ-content {
+      width: 100%;
+    }
+    .right-question {
+      right: 13%;
+    }
+  /*-FAQ-ENDS-----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+  /*FOOTER--------------------------------------------------------------------------------------------------------------------------------------------------*/
+    footer {
+      height: auto;
+      display: block;
+      padding-left:1em;
+      padding-right: 1em;
+      padding-bottom: 3em;
+      padding-top: 1em;
+      box-sizing:border-box;
+    }
+    .logo-footer{
+      width: 100%
+      height:auto;
+    }
+    .footer-line {
+      visibility: collapse;
+      position: absolute;
+      position: relative;
+    }
+    .logo-image-footer {
+      height: 3em;
+      width: 3em;
+      margin-top: 0.5em;
+    }
+    .circle-footer {
+      height: 1em;
+      width: 1em;
+    }
+    .logo-title-ar-footer {
+      margin: auto;
+      margin-left: 1em;
+      font-size: 1.2em;
+    }
+    .footer-left {
+      width: 100%;
+    }
+    .footer-right {
+      width: 100%;
+      padding-top: 2em;
+      font-size: 0.7em;
+      height:auto;
+    }
+    .footer-option {
+      margin-left: 1em;
+      margin-top: 1em;
+      line-height: 1.5em;
+      font-size: 2em;
+    }
+    .footer-options-ar li{
+      height: auto;
+    }
+    .footer-options-ar{
+      flex-wrap: wrap;
+    }
+    .c-bottom-footer {
+      margin: 1em auto auto auto;
+    }
+  /*-FOOTER-ENDS---------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+}
+
+
+@media screen and (min-width: 750px) and (max-width: 810px){
+  .footer-option {
+      font-size: 1.2em;
+  }
+}
+@media screen and (min-width:750px) AND (max-width:1000px){
+  .contact-us-left-image {
+    height: 65%;
+    margin-top: 5em;
+    width: 90%;
+  }
+  .contact-us-right {
+    font-size: 1em;
+  }
+  .contact-us-right-image {
+    height: 40%;
+    margin-top: 16em;
+    width: 100%;
+  }
+
+}
+@media screen and (min-width:811px) AND (max-width:900px){
+
+  .footer-option{
+    font-size: 1.3em;
+  }
+  .logo-title-ar-footer {
+  font-size: 0.5em;
+  }
+
+}
+@media screen and (min-width:901px) AND (max-width:1000px){
+  .footer-option{
+    font-size: 1.4em;
+  }
+  .logo-title-ar-footer {
+    font-size: 0.7em;
+  }
+}
+@media screen and (min-width:1001px) AND (max-width:1075px){
+  .footer-option{
+    font-size: 1.6em;
+  }
+  .logo-title-ar-footer {
+    font-size: 0.8em;
+  }
+}
+@media screen and (min-width:1076px) AND (max-width:1149px){
+
+  .footer-option{
+    font-size: 1.6em;
+  }
+  .logo-title-ar-footer {
+    font-size: 0.9em;
+  }
+}
+@media screen and (min-width:1150px){
+
+  .logo-image-footer {
+    width: 70px;
+    height: 70px;
+  }
+  .circle-footer {
+    height: 20px;
+    width: 20px;
+  }
+  .c-bottom-footer {
+      margin: 20px auto;
+  }
+
+}
+@media screen and (min-width:1201px){
+  .circle-footer {
+    height: 25px;
+    width: 25px;
+  }
+  .c-bottom-footer {
+      margin: 25px auto;
+  }
+}
+
+@media screen and (min-height: 1500px) AND (min-width:1000px) AND (max-width:1400px) {
+  .nav-bar {
+    height: 50vh;
+  }
+}
