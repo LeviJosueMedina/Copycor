@@ -8,7 +8,7 @@ Developed by: LeviJosueMedina - mebur.dev
 ```
 ## Deployed Project
 ```
-https://carefines.netlify.app/
+https://copycor.netlify.app/
 ```
  
 
